@@ -4,7 +4,7 @@ pipeline {
         registryCredential = 'dockerhub'
   }
   agent {
-        label 'jenkins_sl'
+        label 'master'
   }
     
   stages {
