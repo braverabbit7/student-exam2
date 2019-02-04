@@ -1,1 +1,11 @@
-echo '111'
+pipeline {
+  agent any
+
+  stages {
+    stage("Hello") {
+      steps {
+        echo "hello"
+      }
+    }
+  }
+}
