@@ -22,5 +22,13 @@ pipeline {
                 """
       }
     }
+    stage("Build_image") {
+            steps {
+                script {
+                    dockerImage = docker.build registry + ":flask-1.$BUILD_NUMBER"
+                }
+            }
+        }
+
   }
 }
