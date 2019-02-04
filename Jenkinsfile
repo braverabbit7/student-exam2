@@ -25,19 +25,5 @@ pipeline {
         }
       }
     }
-    stage('Pushing image') {
-       steps{
-        script {
-          docker.withRegistry( '', registryCredential ) {
-          dockerImage.push()
-          }
-         }
-       }
-     }
-    stage('Clean existing image') {
-        steps{
-         sh "docker rmi $registry:${env.BUILD_NUMBER}"
-        }
-    }
-  }
-}
+	}
+	}
