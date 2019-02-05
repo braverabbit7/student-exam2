@@ -11,7 +11,8 @@ COPY /exam2 /student
 WORKDIR /student
 #layer 3 (install pip)
 RUN pip install -e . && \
-apk add curl
+apk add curl &&\
+chmod +x ruapp
 #layer 4 (run app)
 EXPOSE 5000
 ENTRYPOINT ["/bin/sh"]
