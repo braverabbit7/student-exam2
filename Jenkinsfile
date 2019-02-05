@@ -25,7 +25,7 @@ pipeline {
     stage("Build_image") {
             steps {
               sh '''
-                docker build . -t web-app
+                docker build . -t braverabbit/epam-exam:web-app
                 '''
             }
             }
