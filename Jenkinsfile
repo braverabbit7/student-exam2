@@ -29,6 +29,13 @@ pipeline {
                 '''
             }
             }
+    	 stage('Publish') {
+      
+      steps {
+        withDockerRegistry([ credentialsId: "086567c7-9749-4154-b5e0-03f99636c04f", url: "" ]) {
+          sh 'docker push braverabbit/epam-exam:web-app'
+		  }
+		  }
         }
 
   }
