@@ -24,9 +24,10 @@ pipeline {
     }
     stage("Build_image") {
             steps {
-                script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                }
+              sh '''
+                docker build . -t web-app
+                '''
+            }
             }
         }
 
