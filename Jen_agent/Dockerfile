@@ -8,6 +8,8 @@ RUN apk add openssh \
 && apk add openjdk8 \
 && apk add ansible \
 && apk add python3 \
+&& apk add git \
+&& apk add docker \
 && apk add bash
 #layer 2: `Запуск ssh-сервера`
 RUN /usr/bin/ssh-keygen -A
