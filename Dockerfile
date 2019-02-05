@@ -7,7 +7,7 @@ RUN apk upgrade
 RUN apk add python3 && \
 apk add py-pip
 ##layer 2: `copy app`
-COPY /exam2 /student
+COPY . /student
 WORKDIR /student
 ##layer 3 (install pip)
 RUN pip install -e .
