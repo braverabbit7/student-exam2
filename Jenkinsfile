@@ -11,7 +11,6 @@ pipeline {
     stage("Run_sc") {
       steps {
         sh """
-        su
          python3 -m venv venv
                     . venv/bin/activate
                     pip install -e .
@@ -26,7 +25,7 @@ pipeline {
     stage("Build_image") {
             steps {
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = sudo docker.build registry + ":$BUILD_NUMBER"
                 }
             }
         }
