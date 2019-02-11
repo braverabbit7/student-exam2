@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Adaykin Semen
+MAINTAINER Adaykin S
 #Обновление пакетов; Установка программ
 RUN apk update
 RUN apk upgrade
